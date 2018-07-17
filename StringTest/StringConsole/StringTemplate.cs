@@ -7,6 +7,7 @@ namespace StringConsole
 {
     public class StringTemplate
     {
+        //The size of char in memory.
         private static int CharSize;
 
         static StringTemplate()
@@ -30,9 +31,18 @@ namespace StringConsole
                 {
                     if (value < _min)
                     {
+                        int old = _min;
+                        char[][] newCache = new char[_max - value + 1][];
+                        Array.Copy(_cache,0, newCache, _min - value, _cache.Length);
+                        _cache = newCache;
+
                         _min = value;
+                        for (int i = value; i < old; i += 1)
+                        {
+                            StretchCache(i);
+                        }
+                        
                     }
-                    StretchCache(value);
                 }
             }
         }
@@ -45,14 +55,14 @@ namespace StringConsole
             {
                 if (value > _max)
                 {
-                    int old = _max + 1;
+                    int old = _max;
 
-                    char[][] newCache = new char[value+1][];
+                    char[][] newCache = new char[value-_min+1][];
                     Array.Copy(_cache, newCache, _cache.Length);
                     _cache = newCache;
 
                     _max = value;
-                    for (int i = old; i <= value; i+=1)
+                    for (int i = old+1; i <= value; i+=1)
                     {
                         StretchCache(i);
                     }
@@ -84,8 +94,8 @@ namespace StringConsole
 
             _min = min;
             _max = max;
-            _cache = new char[max+1][];
-            for (int i = _min; i <= _max; i++)
+            _cache = new char[_max-_min+1][];
+            for (int i = _min; i <= _max; i+=1)
             {
                 StretchCache(i);
             }
@@ -97,14 +107,15 @@ namespace StringConsole
         /// <param name="valueLength">Fill-String's length</param>
         private void StretchCache(int valueLength)
         {
+            int index = valueLength - _min;
             if (valueLength<=_max)
             {
-                if (_cache[valueLength]==null)
+                if (_cache[index] ==null)
                 {
                     var newChars = new char[_template.Length + valueLength-1];
                     Buffer.BlockCopy(_template, 0, newChars, 0, _realOffset);
                     Buffer.BlockCopy(_template, (_offset + 1) * CharSize, newChars, (_offset + valueLength) * CharSize, (_template.Length - _offset - 1) * CharSize);
-                    _cache[valueLength] = newChars;
+                    _cache[index] = newChars;
                 }
             }
         }
@@ -116,12 +127,12 @@ namespace StringConsole
         public string Format(string value)
         {
             int length = value.Length;
-
+            int index = length - _min;
             if (length <= _max)
             {
-                if (_cache[length] != null)
+                if (_cache[index] != null)
                 {
-                    var chars = _cache[length];
+                    var chars = _cache[index];
                     for (int i = 0; i < length; i += 1)
                     {
                         chars[_offset + i] = value[i];

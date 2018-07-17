@@ -3704,11 +3704,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Project\\StringTest\\StringConsole\\StringConsole.csproj",
+      "projectUniqueName": "D:\\Github\\StringTemplate\\StringTest\\StringConsole\\StringConsole.csproj",
       "projectName": "StringConsole",
-      "projectPath": "D:\\Project\\StringTest\\StringConsole\\StringConsole.csproj",
+      "projectPath": "D:\\Github\\StringTemplate\\StringTest\\StringConsole\\StringConsole.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "D:\\Project\\StringTest\\StringConsole\\obj\\",
+      "outputPath": "D:\\Github\\StringTemplate\\StringTest\\StringConsole\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
