@@ -1,0 +1,11 @@
+D:\Project\StringTest\StringConsole\bin\Debug\netcoreapp2.0\StringConsole.deps.json
+D:\Project\StringTest\StringConsole\bin\Debug\netcoreapp2.0\StringConsole.runtimeconfig.json
+D:\Project\StringTest\StringConsole\bin\Debug\netcoreapp2.0\StringConsole.runtimeconfig.dev.json
+D:\Project\StringTest\StringConsole\bin\Debug\netcoreapp2.0\StringConsole.dll
+D:\Project\StringTest\StringConsole\bin\Debug\netcoreapp2.0\StringConsole.pdb
+D:\Project\StringTest\StringConsole\obj\Debug\netcoreapp2.0\StringConsole.csprojAssemblyReference.cache
+D:\Project\StringTest\StringConsole\obj\Debug\netcoreapp2.0\StringConsole.csproj.CoreCompileInputs.cache
+D:\Project\StringTest\StringConsole\obj\Debug\netcoreapp2.0\StringConsole.AssemblyInfoInputs.cache
+D:\Project\StringTest\StringConsole\obj\Debug\netcoreapp2.0\StringConsole.AssemblyInfo.cs
+D:\Project\StringTest\StringConsole\obj\Debug\netcoreapp2.0\StringConsole.dll
+D:\Project\StringTest\StringConsole\obj\Debug\netcoreapp2.0\StringConsole.pdb
