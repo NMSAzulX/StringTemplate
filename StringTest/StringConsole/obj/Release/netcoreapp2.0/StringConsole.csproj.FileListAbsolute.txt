@@ -20,3 +20,10 @@ D:\Github\StringTemplate\StringTest\StringConsole\obj\Release\netcoreapp2.0\Stri
 D:\Github\StringTemplate\StringTest\StringConsole\obj\Release\netcoreapp2.0\StringConsole.AssemblyInfo.cs
 D:\Github\StringTemplate\StringTest\StringConsole\obj\Release\netcoreapp2.0\StringConsole.dll
 D:\Github\StringTemplate\StringTest\StringConsole\obj\Release\netcoreapp2.0\StringConsole.pdb
+D:\Github\StringTemplate\StringTest\StringConsole\bin\Release\netcoreapp2.0\x86\KernelTraceControl.dll
+D:\Github\StringTemplate\StringTest\StringConsole\bin\Release\netcoreapp2.0\x86\KernelTraceControl.Win61.dll
+D:\Github\StringTemplate\StringTest\StringConsole\bin\Release\netcoreapp2.0\x86\msdia140.dll
+D:\Github\StringTemplate\StringTest\StringConsole\bin\Release\netcoreapp2.0\amd64\KernelTraceControl.dll
+D:\Github\StringTemplate\StringTest\StringConsole\bin\Release\netcoreapp2.0\amd64\msdia140.dll
+D:\Github\StringTemplate\StringTest\StringConsole\bin\Release\netcoreapp2.0\TraceReloggerLib.dll
+D:\Github\StringTemplate\StringTest\StringConsole\bin\Release\netcoreapp2.0\Dia2Lib.dll

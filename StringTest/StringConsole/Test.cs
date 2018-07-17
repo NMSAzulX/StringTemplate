@@ -1,16 +1,24 @@
 ﻿using BenchmarkDotNet.Attributes;
+using BenchmarkDotNet.Attributes.Columns;
+using BenchmarkDotNet.Attributes.Exporters;
+using BenchmarkDotNet.Attributes.Jobs;
+using BenchmarkDotNet.Diagnostics.Windows.Configs;
 using System.Text;
 
 namespace StringConsole
 {
+    [CoreJob]
+    [MemoryDiagnoser]
+    [InliningDiagnoser]
+    [TailCallDiagnoser]
     public class Test
     {
-        static int count;
+        [Params(10,1000)]
+        public int count;
         static string formart_one;
         static StringTemplate formart_two;
         static Test()
         {
-            count = 10000;
             formart_one = "My name is {0}";
             formart_two =new StringTemplate("My name is ①",6);
         }

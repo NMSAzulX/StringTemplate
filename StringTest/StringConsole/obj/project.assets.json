@@ -34,6 +34,35 @@
           "lib/netcoreapp2.0/BenchmarkDotNet.Core.dll": {}
         }
       },
+      "BenchmarkDotNet.Diagnostics.Windows/0.10.14": {
+        "type": "package",
+        "compile": {
+          "lib/net46/BenchmarkDotNet.Diagnostics.Windows.dll": {}
+        },
+        "runtime": {
+          "lib/net46/BenchmarkDotNet.Diagnostics.Windows.dll": {}
+        }
+      },
+      "Microsoft.Diagnostics.Tracing.TraceEvent/2.0.19": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Dia2Lib.dll": {},
+          "lib/netstandard2.0/Microsoft.Diagnostics.FastSerialization.dll": {},
+          "lib/netstandard2.0/Microsoft.Diagnostics.Tracing.TraceEvent.dll": {},
+          "lib/netstandard2.0/OSExtensions.dll": {},
+          "lib/netstandard2.0/TraceReloggerLib.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Dia2Lib.dll": {},
+          "lib/netstandard2.0/Microsoft.Diagnostics.FastSerialization.dll": {},
+          "lib/netstandard2.0/Microsoft.Diagnostics.Tracing.TraceEvent.dll": {},
+          "lib/netstandard2.0/OSExtensions.dll": {},
+          "lib/netstandard2.0/TraceReloggerLib.dll": {}
+        },
+        "build": {
+          "build/Microsoft.Diagnostics.Tracing.TraceEvent.props": {}
+        }
+      },
       "Microsoft.DotNet.InternalAbstractions/1.0.0": {
         "type": "package",
         "dependencies": {
@@ -988,6 +1017,54 @@
         "lib/netcoreapp1.1/BenchmarkDotNet.Core.xml",
         "lib/netcoreapp2.0/BenchmarkDotNet.Core.dll",
         "lib/netcoreapp2.0/BenchmarkDotNet.Core.xml"
+      ]
+    },
+    "BenchmarkDotNet.Diagnostics.Windows/0.10.14": {
+      "sha512": "Q7ptesT5XSwk8r88X8gfF/xoiCMi2Y/WM6z7UFa2dKKJu1QaQ0S22DjYt+5718vZ9orJp5o8zRTi04/ksjTN9g==",
+      "type": "package",
+      "path": "benchmarkdotnet.diagnostics.windows/0.10.14",
+      "files": [
+        "benchmarkdotnet.diagnostics.windows.0.10.14.nupkg.sha512",
+        "benchmarkdotnet.diagnostics.windows.nuspec",
+        "lib/net46/BenchmarkDotNet.Diagnostics.Windows.dll",
+        "lib/net46/BenchmarkDotNet.Diagnostics.Windows.xml"
+      ]
+    },
+    "Microsoft.Diagnostics.Tracing.TraceEvent/2.0.19": {
+      "sha512": "V28f1s3QapjhLe/WrnKTjC7YACXJPoepkMC4VQMa83mIYvNg1RGhzuOGUpjQbYR24gF14nrt4lT9Kw1nFBHsbQ==",
+      "type": "package",
+      "path": "microsoft.diagnostics.tracing.traceevent/2.0.19",
+      "files": [
+        ".signature.p7s",
+        "build/Microsoft.Diagnostics.Tracing.TraceEvent.props",
+        "lib/native/amd64/KernelTraceControl.dll",
+        "lib/native/amd64/msdia140.dll",
+        "lib/native/x86/KernelTraceControl.Win61.dll",
+        "lib/native/x86/KernelTraceControl.dll",
+        "lib/native/x86/msdia140.dll",
+        "lib/net45/Dia2Lib.dll",
+        "lib/net45/Microsoft.Diagnostics.FastSerialization.dll",
+        "lib/net45/Microsoft.Diagnostics.FastSerialization.xml",
+        "lib/net45/Microsoft.Diagnostics.Tracing.TraceEvent.dll",
+        "lib/net45/Microsoft.Diagnostics.Tracing.TraceEvent.xml",
+        "lib/net45/OSExtensions.dll",
+        "lib/net45/TraceReloggerLib.dll",
+        "lib/netstandard1.6/Dia2Lib.dll",
+        "lib/netstandard1.6/Microsoft.Diagnostics.FastSerialization.dll",
+        "lib/netstandard1.6/Microsoft.Diagnostics.FastSerialization.xml",
+        "lib/netstandard1.6/Microsoft.Diagnostics.Tracing.TraceEvent.dll",
+        "lib/netstandard1.6/Microsoft.Diagnostics.Tracing.TraceEvent.xml",
+        "lib/netstandard1.6/OSExtensions.dll",
+        "lib/netstandard1.6/TraceReloggerLib.dll",
+        "lib/netstandard2.0/Dia2Lib.dll",
+        "lib/netstandard2.0/Microsoft.Diagnostics.FastSerialization.dll",
+        "lib/netstandard2.0/Microsoft.Diagnostics.FastSerialization.xml",
+        "lib/netstandard2.0/Microsoft.Diagnostics.Tracing.TraceEvent.dll",
+        "lib/netstandard2.0/Microsoft.Diagnostics.Tracing.TraceEvent.xml",
+        "lib/netstandard2.0/OSExtensions.dll",
+        "lib/netstandard2.0/TraceReloggerLib.dll",
+        "microsoft.diagnostics.tracing.traceevent.2.0.19.nupkg.sha512",
+        "microsoft.diagnostics.tracing.traceevent.nuspec"
       ]
     },
     "Microsoft.DotNet.InternalAbstractions/1.0.0": {
@@ -3694,6 +3771,8 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
       "BenchmarkDotNet >= 0.10.14",
+      "BenchmarkDotNet.Diagnostics.Windows >= 0.10.14",
+      "Microsoft.Diagnostics.Tracing.TraceEvent >= 2.0.19",
       "Microsoft.NETCore.App >= 2.0.0"
     ]
   },
@@ -3742,6 +3821,14 @@
             "target": "Package",
             "version": "[0.10.14, )"
           },
+          "BenchmarkDotNet.Diagnostics.Windows": {
+            "target": "Package",
+            "version": "[0.10.14, )"
+          },
+          "Microsoft.Diagnostics.Tracing.TraceEvent": {
+            "target": "Package",
+            "version": "[2.0.19, )"
+          },
           "Microsoft.NETCore.App": {
             "target": "Package",
             "version": "[2.0.0, )",
@@ -3755,5 +3842,17 @@
         "warn": true
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "已使用“.NETFramework,Version=v4.6.1”而不是项目目标框架“.NETCoreApp,Version=v2.0”还原包“BenchmarkDotNet.Diagnostics.Windows 0.10.14”。此包可能与项目不完全兼容。",
+      "libraryId": "BenchmarkDotNet.Diagnostics.Windows",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.0"
+      ]
+    }
+  ]
 }

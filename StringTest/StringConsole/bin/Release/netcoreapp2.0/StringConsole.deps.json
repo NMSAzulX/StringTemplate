@@ -1,14 +1,16 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.0",
-    "signature": "a38e07ae2936b5770339faf2036348a47ccf0b5d"
+    "signature": "45646b87d8e50de92a335f4323911f860921e8c5"
   },
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v2.0": {
       "StringConsole/1.0.0": {
         "dependencies": {
-          "BenchmarkDotNet": "0.10.14"
+          "BenchmarkDotNet": "0.10.14",
+          "BenchmarkDotNet.Diagnostics.Windows": "0.10.14",
+          "Microsoft.Diagnostics.Tracing.TraceEvent": "2.0.19"
         },
         "runtime": {
           "StringConsole.dll": {}
@@ -36,6 +38,20 @@
         },
         "runtime": {
           "lib/netcoreapp2.0/BenchmarkDotNet.Core.dll": {}
+        }
+      },
+      "BenchmarkDotNet.Diagnostics.Windows/0.10.14": {
+        "runtime": {
+          "lib/net46/BenchmarkDotNet.Diagnostics.Windows.dll": {}
+        }
+      },
+      "Microsoft.Diagnostics.Tracing.TraceEvent/2.0.19": {
+        "runtime": {
+          "lib/netstandard2.0/Dia2Lib.dll": {},
+          "lib/netstandard2.0/Microsoft.Diagnostics.FastSerialization.dll": {},
+          "lib/netstandard2.0/Microsoft.Diagnostics.Tracing.TraceEvent.dll": {},
+          "lib/netstandard2.0/OSExtensions.dll": {},
+          "lib/netstandard2.0/TraceReloggerLib.dll": {}
         }
       },
       "Microsoft.DotNet.InternalAbstractions/1.0.0": {
@@ -513,6 +529,20 @@
       "sha512": "sha512-f2B6ERn4sBCv4VVt699FYtfRfqX0NuMZoG1lXrzNkCKyPRjRWvreqqJ5aRTMf4PnosfUaylQezpi1yoITncCRQ==",
       "path": "benchmarkdotnet.core/0.10.14",
       "hashPath": "benchmarkdotnet.core.0.10.14.nupkg.sha512"
+    },
+    "BenchmarkDotNet.Diagnostics.Windows/0.10.14": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Q7ptesT5XSwk8r88X8gfF/xoiCMi2Y/WM6z7UFa2dKKJu1QaQ0S22DjYt+5718vZ9orJp5o8zRTi04/ksjTN9g==",
+      "path": "benchmarkdotnet.diagnostics.windows/0.10.14",
+      "hashPath": "benchmarkdotnet.diagnostics.windows.0.10.14.nupkg.sha512"
+    },
+    "Microsoft.Diagnostics.Tracing.TraceEvent/2.0.19": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-V28f1s3QapjhLe/WrnKTjC7YACXJPoepkMC4VQMa83mIYvNg1RGhzuOGUpjQbYR24gF14nrt4lT9Kw1nFBHsbQ==",
+      "path": "microsoft.diagnostics.tracing.traceevent/2.0.19",
+      "hashPath": "microsoft.diagnostics.tracing.traceevent.2.0.19.nupkg.sha512"
     },
     "Microsoft.DotNet.InternalAbstractions/1.0.0": {
       "type": "package",

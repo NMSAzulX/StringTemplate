@@ -9,7 +9,7 @@ namespace StringConsole
         
         static void Main(string[] args)
         {
-            ///*
+            /*
             string model = "My name is ①;";
             StringTemplate template = new StringTemplate(model,2,4);
             template.Max = 6;
@@ -21,7 +21,7 @@ namespace StringConsole
             Console.WriteLine(result3);
             //Console.WriteLine(result2);
             //*/
-            //BenchmarkDotNet.Running.BenchmarkRunner.Run<Test>();
+            BenchmarkDotNet.Running.BenchmarkRunner.Run<Test>();
 
             Console.ReadKey();
 

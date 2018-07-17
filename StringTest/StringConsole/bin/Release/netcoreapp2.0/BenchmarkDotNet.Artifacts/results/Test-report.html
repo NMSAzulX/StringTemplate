@@ -17,17 +17,21 @@ BenchmarkDotNet=v0.10.14, OS=Windows 10.0.17134
 Intel Core i7-8750H CPU 2.20GHz (Coffee Lake), 1 CPU, 12 logical and 6 physical cores
 Frequency=2156251 Hz, Resolution=463.7679 ns, Timer=TSC
 .NET Core SDK=2.1.202
-  [Host]     : .NET Core 2.0.9 (CoreCLR 4.6.26614.01, CoreFX 4.6.26614.01), 64bit RyuJIT  [AttachedDebugger]
-  DefaultJob : .NET Core 2.0.9 (CoreCLR 4.6.26614.01, CoreFX 4.6.26614.01), 64bit RyuJIT
+  [Host] : .NET Core 2.0.9 (CoreCLR 4.6.26614.01, CoreFX 4.6.26614.01), 64bit RyuJIT  [AttachedDebugger]
+  Core   : .NET Core 2.0.9 (CoreCLR 4.6.26614.01, CoreFX 4.6.26614.01), 64bit RyuJIT
 </code></pre>
-<pre><code></code></pre>
+<pre><code>Job=Core  Runtime=Core  
+</code></pre>
 
 <table>
-<thead><tr><th>  Method</th><th>Mean</th><th>Error</th><th>StdDev</th>
+<thead><tr><th>  Method</th><th>count</th><th>  Mean</th><th> Error</th><th>StdDev</th><th>Median</th><th>Gen 0</th><th>Allocated</th>
 </tr>
-</thead><tbody><tr><td>StringBuilder</td><td>902.3 us</td><td>16.890 us</td><td>15.799 us</td>
-</tr><tr><td>StringFormat</td><td>1,587.0 us</td><td>9.254 us</td><td>7.727 us</td>
-</tr><tr><td>TemplateFormat</td><td>617.1 us</td><td>11.141 us</td><td>10.421 us</td>
+</thead><tbody><tr><td>StringBuilder</td><td>10</td><td>753.7 ns</td><td>9.978 ns</td><td>8.332 ns</td><td>751.9 ns</td><td>0.4063</td><td>1920 B</td>
+</tr><tr><td>StringFormat</td><td>10</td><td>1,597.3 ns</td><td>31.814 ns</td><td>73.733 ns</td><td>1,562.0 ns</td><td>0.2365</td><td>1120 B</td>
+</tr><tr><td>TemplateFormat</td><td>10</td><td>632.3 ns</td><td>15.019 ns</td><td>18.445 ns</td><td>625.7 ns</td><td>0.1860</td><td>880 B</td>
+</tr><tr><td>StringBuilder</td><td>1000</td><td>77,247.7 ns</td><td>932.753 ns</td><td>826.862 ns</td><td>77,235.9 ns</td><td>40.6494</td><td>192000 B</td>
+</tr><tr><td>StringFormat</td><td>1000</td><td>157,256.5 ns</td><td>1,585.411 ns</td><td>1,482.995 ns</td><td>157,001.6 ns</td><td>23.6816</td><td>112000 B</td>
+</tr><tr><td>TemplateFormat</td><td>1000</td><td>61,062.8 ns</td><td>174.361 ns</td><td>145.599 ns</td><td>61,072.6 ns</td><td>18.6157</td><td>88000 B</td>
 </tr></tbody></table>
 </body>
 </html>
