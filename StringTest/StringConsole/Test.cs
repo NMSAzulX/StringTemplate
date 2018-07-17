@@ -13,14 +13,14 @@ namespace StringConsole
     [TailCallDiagnoser]
     public class Test
     {
-        [Params(10,1000)]
+        [Params(1000)]
         public int count;
         static string formart_one;
         static StringTemplate formart_two;
         static Test()
         {
             formart_one = "My name is {0}";
-            formart_two =new StringTemplate("My name is ①",6);
+            formart_two =new StringTemplate("My name is ①",4);
         }
         [Benchmark]
         public void StringBuilder()

@@ -10,11 +10,8 @@ Frequency=2156251 Hz, Resolution=463.7679 ns, Timer=TSC
 Job=Core  Runtime=Core  
 
 ```
-|         Method | count |         Mean |        Error |       StdDev |       Median |   Gen 0 | Allocated |
-|--------------- |------ |-------------:|-------------:|-------------:|-------------:|--------:|----------:|
-|  **StringBuilder** |    **10** |     **753.7 ns** |     **9.978 ns** |     **8.332 ns** |     **751.9 ns** |  **0.4063** |    **1920 B** |
-|   StringFormat |    10 |   1,597.3 ns |    31.814 ns |    73.733 ns |   1,562.0 ns |  0.2365 |    1120 B |
-| TemplateFormat |    10 |     632.3 ns |    15.019 ns |    18.445 ns |     625.7 ns |  0.1860 |     880 B |
-|  **StringBuilder** |  **1000** |  **77,247.7 ns** |   **932.753 ns** |   **826.862 ns** |  **77,235.9 ns** | **40.6494** |  **192000 B** |
-|   StringFormat |  1000 | 157,256.5 ns | 1,585.411 ns | 1,482.995 ns | 157,001.6 ns | 23.6816 |  112000 B |
-| TemplateFormat |  1000 |  61,062.8 ns |   174.361 ns |   145.599 ns |  61,072.6 ns | 18.6157 |   88000 B |
+|         Method | count |      Mean |    Error |   StdDev |   Gen 0 | Allocated |
+|--------------- |------ |----------:|---------:|---------:|--------:|----------:|
+|  StringBuilder |  1000 |  81.57 us | 1.745 us | 3.147 us | 40.6494 |  187.5 KB |
+|   StringFormat |  1000 | 159.37 us | 1.331 us | 1.245 us | 23.6816 | 109.38 KB |
+| TemplateFormat |  1000 |  59.30 us | 1.150 us | 1.020 us | 18.6157 |  85.94 KB |
